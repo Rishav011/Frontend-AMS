@@ -1,0 +1,33 @@
+<div class="dialog">
+  <h2 mat-dialog-title class="title">Upload Files</h2>
+  <mat-dialog-content>
+      <div class="content"
+                (dragover)="onDragOver($event)"
+                (drop)="onDrop($event)"
+                (dragleave)="onDragLeave($event)"
+                [class.active]="isActive">
+        <div class="inner">
+            <button mat-icon-button>
+                <mat-icon>file_upload</mat-icon>
+              </button>
+        </div>
+        <div class="inner">Drag & Drop Files</div>  
+        <div class="inner">OR</div>
+        <div class="inner">
+              <button (click)="fileInput.click()" mat-raised-button color="primary" style="background-color:#627ED1;">Browse Files</button>
+        </div>
+      </div>
+      <mat-spinner [diameter]="40" class="spinner" *ngIf="showSpinner"></mat-spinner>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+      <button mat-button mat-dialog-close mat-dialog-close="false" class="button" style="margin-left: 380px;" (click)="onClick()">Download Template</button>
+      <button mat-button mat-dialog-close mat-dialog-close="true" class="button">Done</button>
+  </mat-dialog-actions>
+</div>
+
+<input
+type="file"
+accept=".xls,.xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+style="display: none;"
+(change)="onFileSelected($event)"
+#fileInput>

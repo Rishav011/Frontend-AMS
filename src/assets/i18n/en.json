@@ -1,0 +1,13 @@
+{
+  "LANDING-PAGE": {
+    "NAME": "Welcome to",
+    "HELP" : "Here is a link to help you start:",
+    "DOCUMENTATION": "SiOUX documentation",
+    "GETSTART": "Get Started"
+  },
+  "LANGUAGE": {
+    "EN": "English (UK)",
+    "DE": "German"
+  }
+}
+

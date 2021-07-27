@@ -1,0 +1,9 @@
+[
+    {"projectName": "PA Intigration","assetCategory": "Hardware","manufacturer": "SIEMENS","assetName": "SIMOCODE pro V PN","description": "SIMOCODE PROFINET device V2.1","mlfb": "3UF7011-1AU00-0","workingCondition": "Yes","remark": "Working fine"},
+    {"projectName": "TIA Platform","assetCategory": "Software","manufacturer": "Others","assetName": "SIMOCODE pro V PN","description": "SIMOCODE PROFINET device V2.1","mlfb": "3UF7011-1AU00-0","workingCondition": "Yes","remark": "Had problems earlier"},
+    {"projectName": "Asser Monitor","assetCategory": "Hardware","manufacturer": "Others","assetName": "SIMOCODE pro V PN","description": "SIMOCODE PROFINET device V2.1","mlfb": "3UF7011-1AU00-0","workingCondition": "Yes","remark": "Working fine"},
+    {"projectName": "STS","assetCategory": "Hardware","manufacturer": "SIEMENS","assetName": "SIMOCODE pro V PN","description": "SIMOCODE PROFINET device V2.1","mlfb": "3UF7011-1AU00-0","workingCondition": "No","remark": "Had problems earlier"},
+    {"projectName": "PA Intigration","assetCategory": "Software","manufacturer": "SIEMENS","assetName": "SIMOCODE pro V PN","description": "SIMOCODE PROFINET device V2.1","mlfb": "3UF7011-1AU00-0","workingCondition": "Yes","remark": "Working fine"},
+    {"projectName": "STS","assetCategory": "Software","manufacturer": "Others","assetName": "SIMOCODE pro V PN","description": "SIMOCODE PROFINET device V2.1","mlfb": "3UF7011-1AU00-0","workingCondition": "Yes","remark": "Had problems earlier"},
+    {"projectName": "Simulator","assetCategory": "Hardware","manufacturer": "SIEMENS","assetName": "SIMOCODE pro V PN","description": "SIMOCODE PROFINET device V2.1","mlfb": "3UF7011-1AU00-0","workingCondition": "No","remark": "Working fine"}
+]

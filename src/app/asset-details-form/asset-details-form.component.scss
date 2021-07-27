@@ -1,0 +1,59 @@
+.back{
+    position: absolute;
+   margin: 2% 2%;
+}
+
+.bgdata{
+    position: relative;
+    background: #1D2129 0% 0% no-repeat padding-box;
+border-radius: 4px;
+opacity: 1;
+margin: 2% 2%;
+padding:0.01% 2%;
+}
+.main-title{
+    font: normal normal bold 24px/29px Siemens Sans;
+    position: relative;
+    top: 5px;
+    // margin-left: 20%
+}
+.title{
+    text-align: left;
+font: normal normal bold 20px/24px Siemens Sans;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+
+}
+form{
+    margin-top: 4%;
+}
+
+.ip{
+    width: 328px;
+height: 56px;
+font-size: 15px;
+cursor: auto;
+}
+.space{
+    margin-left: 1%;
+}
+.desc{
+    width:670px;
+    margin-left: 1%;
+}
+mat-label placeholder{
+    color: #fff;
+}
+@media only screen and(max-width:1163px) {
+   .desc{
+       margin-top: 1%;
+       margin-left: 0.1%;
+   }
+   .ip-unq{
+    margin-top: 2%;
+    margin-left: 0.1%;
+
+   }
+
+  }

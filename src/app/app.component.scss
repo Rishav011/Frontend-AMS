@@ -1,0 +1,24 @@
+.reference-url {
+  margin-left: 16px;
+}
+
+.sioux-sioux {
+  font-size: 112px;
+  height: auto;
+  width: auto;
+}
+mat-sidenav-container{
+ height: 400px;
+ width: 50%;
+  // margin-bottom: -5000px; /* any large number will do */
+  // padding-bottom: 50px; 
+}
+mat-sidenav,mat-sidenav-content{
+  padding: 16px;
+  margin-top: 5%;
+}
+mat-sidenav{
+  background-color: lightcoral;
+  width: 500px;
+}
+

@@ -1,0 +1,19 @@
+<div class="dialog">
+    <h1 class="title" mat-dialog-title>Upload Files</h1>
+    <mat-dialog-content>
+         <div style="display: flex;height: 120px;margin-top: 30px;">
+            <mat-icon style="font-size: 50px;">insert_drive_file</mat-icon>
+            <div style="display: flexbox;margin-left: 40px;width: 525px;">
+                 <div style="display: flex;margin-top: 3px;justify-content: stretch;">
+                    <div style="width: 520px;font: normal normal normal 16px/16px Siemens Sans;">{{data.msg}}</div>
+                    <mat-icon *ngIf="succ" style="color: #1AD075;">check</mat-icon>
+                    <mat-icon *ngIf="unsucc" style="color: red;">clear</mat-icon>
+                 </div>
+                 <mat-progress-bar style="margin-top: 10px;" mode="determinate" [value]="statusVal" min="0" max="100"></mat-progress-bar>
+            </div>
+         </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button class="button" style="margin-top: 10px;margin-left: 535px;" mat-button mat-dialog-close>Done</button>
+    </mat-dialog-actions>
+</div>

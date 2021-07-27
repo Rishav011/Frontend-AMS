@@ -1,0 +1,108 @@
+.btn-group {
+ 
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  position: relative;
+  left: 83%;
+}
+.btn-group2 {
+ 
+  // padding: 50px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  position: relative;
+  left: 75%;
+}
+mat-form-field{
+  position: relative;left: 72%;margin-top: 15px;font-size:13px;width:100px
+}
+.bar{
+  position: relative;
+  margin-top: 5.7%;
+  margin-left: 2%;
+  width: 95%;
+}
+
+.tablecss{
+    position: absolute;
+    width: 95%;
+    height: 500px;
+    // margin-top:10%;
+    margin-left: 2%;
+    overflow: auto;
+    // margin-right: 2%;
+    
+  }
+  .mat-column-description {
+    white-space: nowrap; text-overflow:ellipsis; overflow: hidden; max-width:100px;
+
+  }
+  .mat-column-remarks {
+    white-space: nowrap; text-overflow:ellipsis; overflow: hidden; max-width:100px;
+  }
+  .list{
+    position:absolute;
+    width: 70px;
+    height: 19px;
+    text-align: left;
+    font: normal normal bold 16px/19px Siemens Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+  td{
+    background: #1C2128;
+    font-size: 13px;
+  }
+  .txt{
+    position: relative;
+    left: 74%;
+    font-size: 15px;
+  }
+
+  .main-title{
+    font: normal normal bold 24px/29px Siemens Sans;
+    position: relative;
+    top: 5px;
+    padding: 2%;
+    top: 5%;
+    margin-bottom: 10%;
+    // margin-left: 20%
+}
+.tbar{
+  width: 100%;
+  bottom: 0px;
+  position: sticky;
+  z-index: 10;
+}
+
+@media only screen and(max-width:1300px) {
+  .btn-group{
+    left: 80%;
+  }
+  .btn-group2{
+    left: 68%;
+  }
+  mat-form-field{
+    left: 65%;
+  }
+  .txt{
+    left:67%;
+  }
+}
+
+@media only screen and(max-width:1150px) {
+  .btn-group{
+    left: 78%;
+  }
+ 
+  .btn-group2{
+    left: 70%;
+  }
+  mat-form-field{
+    left: 70%;
+  }
+}
+
+  

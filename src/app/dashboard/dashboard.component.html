@@ -1,0 +1,104 @@
+<div class="mat-app-background">
+  <div class="dashboard">Dashboard</div>
+  <div class="bgdata">
+    <div style="display: flex;flex-wrap: wrap;">
+      <mat-card class="ip"><mat-icon svgIcon="group2" class="group"></mat-icon><span class="bright_text">{{totalAssetCount}}</span><span class="blur_text">Total Assets</span></mat-card>
+      <mat-card class="ip"><mat-icon svgIcon="folder" class="group"></mat-icon><span class="bright_text">{{totalProjectCount}}</span><span class="blur_text">Total Projects</span></mat-card>
+      <mat-card class="ip"><mat-icon svgIcon="ok" class="group"></mat-icon><span class="bright_text">{{workingAssetCount}}</span><span class="blur_text">No.of Working Assets</span></mat-card>
+      <mat-card class="ip"><mat-icon svgIcon="group2" class="group"></mat-icon><span class="bright_text">{{totalManufacturerCount}}</span><span class="blur_text">Manufacturer</span></mat-card>
+    </div>
+    <div style="display: flex;flex-wrap: wrap-reverse;">
+      <div style="display: flexbox;width: 880px;">
+        <div style="display: flex;flex-wrap: wrap;">
+          <mat-card class="graph1">Manufacturer
+            <div>
+              <div>
+                <div style="width:fit-content">
+                  <canvas baseChart
+                  [data]="doughnutChartManufactureData"
+                  [labels]="doughnutChartManufactureLabels"
+                  [chartType]="doughnutChartManufactureType">
+                </canvas>
+                </div>
+              </div>
+            </div>
+          </mat-card>
+          <mat-card class="graph1">Asset Type
+            <div>
+              <div>
+                <div style="width: fit-content">
+                  <canvas baseChart
+                  [data]="doughnutChartAssetData"
+                  [labels]="doughnutChartAssetLabels"
+                  [chartType]="doughnutChartAssetType">
+                </canvas>
+                </div>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div class="mat-app-background tablecss">
+          <mat-toolbar class="bar">
+           
+            <span class="list">Recently Added</span>
+          </mat-toolbar>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+              
+                <!-- Project Name Column -->
+                <ng-container  matColumnDef="projectName">
+                  <th  mat-header-cell *matHeaderCellDef> Project Name </th>
+                  <td mat-cell *matCellDef="let element" > {{element.projectName}} </td>
+                </ng-container>
+              
+                <!-- Category Column -->
+                <ng-container matColumnDef="category">
+                  <th mat-header-cell *matHeaderCellDef> Asset Category </th>
+                  <td mat-cell *matCellDef="let element" > {{element.category}} </td>
+                </ng-container>
+              
+                <!-- Asset Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef >Asset Name</th>
+                  <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+                </ng-container>
+              
+                <!-- Description Column -->
+                <ng-container matColumnDef="description">
+                  <th mat-header-cell *matHeaderCellDef> Description </th>
+                  <td mat-cell *matCellDef="let element" > {{element.description}} </td>
+                </ng-container>
+
+                <!-- MLFB Column -->
+                <ng-container matColumnDef="mlfb">
+                    <th mat-header-cell *matHeaderCellDef> MLFB </th>
+                    <td mat-cell *matCellDef="let element">   {{element.mlfb}} </td>
+                  </ng-container>
+                            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+        </div>
+      </div>
+      <mat-card class="graph2">Project
+        <div>
+          <div>
+            <div style="display: block">
+              <canvas baseChart
+              [datasets]="BubChartProjectData"
+              [options]="BubChartProjectOptions"
+              [legend]="BubChartProjectLegend"
+              [chartType]="BubChartProjectType">
+            </canvas>
+            </div>
+        
+          </div>
+        </div>
+      </mat-card>
+      </div>
+      
+    </div>
+    
+    
+      
+    
+  </div>

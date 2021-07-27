@@ -1,0 +1,149 @@
+
+<div style="margin-left: 1%;margin-top:1%;" >
+  <button mat-icon-button routerLink='/home' ><mat-icon>keyboard_backspace</mat-icon></button>
+  <label class="main-title">Add New Asset</label>
+</div>
+<<<<<<< HEAD
+<span style="position: relative;top:3%;left:2%">* marked fields are required.</span>
+=======
+>>>>>>> d669f782a9e53c23ec4e87dcf0eff84570d31e95
+<div class="bgdata">
+<form #assetForm="ngForm" (ngSubmit)="onSubmit()">
+  <!-- <hr />
+  {{formDataModel |json}}
+  <hr /> -->
+      <div>
+        <mat-form-field class="ip" appearance="fill">
+            <mat-label>Project Name</mat-label>
+            <mat-select required name="projectName" [(ngModel)]="formDataModel.projectName">
+              <mat-option *ngFor="let projectName of projectNames" value="{{projectName.name}}">{{projectName.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+          <div class="title" style="margin-top:4% ;margin-bottom:2%">Asset Details</div>
+          <div>
+            <mat-form-field class="ip" appearance="fill">
+              <mat-label>Asset Category</mat-label>
+              <mat-select required name="category" [(ngModel)]="formDataModel.category">
+                <mat-option value="Hardware">Hardware</mat-option>
+                <mat-option value="Software">Software</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="desc" appearance="fill">
+              <mat-label>Description</mat-label>
+              <textarea required rows="1" matInput name="description" [(ngModel)]="formDataModel.description" ></textarea>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="ip" appearance="fill">
+              <mat-label>Manufacturer</mat-label>
+              <mat-select required name="manufacturer" [(ngModel)]="formDataModel.manufacturer">
+                <mat-option value="SIEMENS">SIEMENS</mat-option>
+                <mat-option value="Others">Others</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="ip space" appearance="fill">
+              <mat-label>Asset Name</mat-label>
+              <input matInput required name="name" [(ngModel)]="formDataModel.name">
+            </mat-form-field>
+            <mat-form-field class="ip space ip-unq" appearance="fill">
+              <mat-label>MLFB</mat-label>
+              <input matInput required name="mlfb" [(ngModel)]="formDataModel.mlfb">
+            </mat-form-field>
+          </div>
+          <div style="margin-top: 1.5%;">
+            <mat-form-field class="ip" appearance="fill">
+              <mat-label>Support Communication</mat-label>
+              <mat-select name="supportComm" [(ngModel)]="formDataModel.supportComm">
+                <mat-option *ngFor="let element of supportComms" value="{{element}}">{{element}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+           
+            <mat-form-field class="ip space" appearance="fill">
+              <mat-label >Serial Number</mat-label>
+              <input matInput name="serialNumber" [(ngModel)]="formDataModel.serialNumber">
+            </mat-form-field>
+
+            <mat-form-field class="ip space ip-unq" appearance="fill">
+              <mat-label>Working Condition</mat-label>
+              <mat-select name="workingCondition" [(ngModel)]="formDataModel.workingCondition">
+                <mat-option value="Yes">Yes</mat-option>
+                <mat-option value="No">No</mat-option>
+              </mat-select>
+            </mat-form-field>
+            
+          </div>
+          <div style="margin-top: 1.5%;">
+            <mat-form-field class="ip" appearance="fill">
+                <mat-label>Asset Located In</mat-label>
+                <mat-select name="location" [(ngModel)]="formDataModel.location">
+                  <mat-option value="one">First option</mat-option>
+                  <mat-option value="two">Second option</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field class="ip space" appearance="fill">
+                <mat-label>IP Address</mat-label>
+                <input matInput name="ipAddress" [(ngModel)]="formDataModel.ipAddress">
+              </mat-form-field>
+              <mat-form-field class="ip space ip-unq" appearance="fill">
+                <mat-label>IP Type</mat-label>
+                <mat-select name="ipType" [(ngModel)]="formDataModel.ipType">
+                  <mat-option value="DHCP">DHCP</mat-option>
+                  <mat-option value="Static">Static</mat-option>
+                  <mat-option value="No IP">No IP</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div style="margin-top: 1.5%;">
+              <mat-form-field class="ip" appearance="fill">
+                <mat-label>MAC Address</mat-label>
+                <input matInput name="macAddress" [(ngModel)]="formDataModel.macAddress">
+              </mat-form-field>
+            </div>
+          <div class="title" style="margin-top:4% ;margin-bottom:2%">Invoice Details</div>
+          <div  style="margin-top: 1.5%;">
+            <mat-form-field appearance="fill" class="ip">
+              <mat-label>Choose a date</mat-label>
+              <input required="false" matInput [matDatepicker]="creatoDal" [max]="maxDate"
+                            (focus)="creatoDal.open()" readonly name="invoiceReceiveDate" [(ngModel)]="formDataModel.invoiceReceiveDate">
+                        <mat-datepicker-toggle matSuffix [for]="creatoDal"></mat-datepicker-toggle>
+                        <mat-datepicker  ng-model-options="{timezone: 'utc'}" #creatoDal></mat-datepicker>
+              </mat-form-field>
+           
+              <mat-form-field class="ip space" appearance="fill">
+                <mat-label>PO Number</mat-label>
+                <input matInput name="poNumber" [(ngModel)]="formDataModel.poNumber">
+              </mat-form-field>
+
+          </div>
+          <div  style="margin-top: 1.5%;">
+            <mat-form-field class="ip" appearance="fill">
+              <mat-label>Invoice Number</mat-label>
+              <input matInput name="invoiceNumber" [(ngModel)]="formDataModel.invoiceNumber">
+            </mat-form-field>
+           
+          </div>
+          <div class="title" style="margin-top:4% ;margin-bottom:2%">User Detail</div>
+          <div  style="margin-top: 1.5%;">
+            <mat-form-field class="ip" appearance="fill">
+              <mat-label>Current Email-ID</mat-label>
+              <input matInput name="currentUserEmail" [(ngModel)]="formDataModel.currentUserEmail">
+            </mat-form-field>
+            <mat-form-field class="ip space" appearance="fill">
+              <mat-label>Owner</mat-label>
+              <input matInput  name="owner" [(ngModel)]="formDataModel.owner">
+            </mat-form-field>
+          </div>
+          <div style="margin-top:1.5%;">
+            <mat-form-field style=" width:670px" appearance="fill">
+              <mat-label>Remarks</mat-label>
+              <textarea rows="1" matInput  name="remarks" [(ngModel)]="formDataModel.remarks"></textarea>
+            </mat-form-field>
+
+          </div>
+          <div style="margin:4% 0%">
+            <button mat-raised-button routerLink="/home">Cancel</button>
+            <button [disabled]="assetForm.form.invalid" type="submit" mat-raised-button color="primary" style="background-color:#627ED1;margin-left: 1%">{{buttonName}}</button>
+          </div>
+</form>
+</div>
